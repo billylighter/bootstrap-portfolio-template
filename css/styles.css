@@ -11344,7 +11344,7 @@ html {
 }
 
 .sidebar-nav {
-  position: absolute;
+  position: static;
   top: 0;
   width: 250px;
   margin: 0;
@@ -11421,16 +11421,34 @@ html {
 
 .callout {
   padding: 15rem 0;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../assets/img/bg-callout.jpg");
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../assets/img/bg-callout-2.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+.callout * {
+  position: relative;
+  z-index: 5;
+}
+.callout:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.3);
 }
 .callout h2, .callout .h2 {
   font-size: 3.5rem;
   font-weight: 700;
   display: block;
-  max-width: 30rem;
+  max-width: 40rem;
 }
 
 footer.footer {
@@ -11476,10 +11494,27 @@ footer.footer .social-link:hover {
   height: auto;
   padding-top: 8rem;
   padding-bottom: 8rem;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../assets/img/bg-masthead.jpg");
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../assets/img/bg-masthead-2.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
+}
+.masthead * {
+  position: relative;
+  z-index: 5;
+}
+.masthead:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.3);
 }
 .masthead h1, .masthead .h1 {
   font-size: 4rem;
