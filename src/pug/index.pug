@@ -11,19 +11,19 @@ html(lang='en')
         title Stylish Portfolio - Start Bootstrap Template
 
         // Favicon
-        link(rel='icon', type='image/x-icon', href='assets/favicon.ico')
+        link(rel='icon' type='image/x-icon' href='assets/favicon.ico')
 
         // Font Awesome icons (free version)
-        script(src='https://use.fontawesome.com/releases/v6.1.0/js/all.js', crossorigin='anonymous')
+        script(src='https://use.fontawesome.com/releases/v6.1.0/js/all.js' crossorigin='anonymous')
 
         // Simple line icons
-        link(href='https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css', rel='stylesheet')
+        link(href='https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css' rel='stylesheet')
 
         // Google fonts
         link(href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic' rel='stylesheet' type='text/css')
 
         // Core theme CSS (includes Bootstrap)
-        link(href='css/styles.css', rel='stylesheet')
+        link(href='css/styles.css' rel='stylesheet')
 
     body#page-top
 
@@ -32,16 +32,32 @@ html(lang='en')
             i.fas.fa-bars
         nav#sidebar-wrapper
             ul.sidebar-nav
-                li.sidebar-brand
-                    a(href='#page-top') Start Bootstrap
+                li.sidebar-brand.d-flex.align-items-center
+                    i.icon-compass.text-white.me-2
+                    span.fw-bold.text-white Navigation
                 li.sidebar-nav-item
                     a(href='#page-top') Home
+                li.sidebar-nav-item
+                    a(href='#portfolio') Portfolio
                 li.sidebar-nav-item
                     a(href='#about') About
                 li.sidebar-nav-item
                     a(href='#services') Services
                 li.sidebar-nav-item
+                    a(href='#contact') Contact
+
+                ul.sidebar-nav
+                li.sidebar-brand.d-flex.align-items-center
+                    i.icon-list.text-white.me-2
+                    span.fw-bold.text-white Table of content
+                li.sidebar-nav-item
+                    a(href='#page-top') Home
+                li.sidebar-nav-item
                     a(href='#portfolio') Portfolio
+                li.sidebar-nav-item
+                    a(href='#about') About
+                li.sidebar-nav-item
+                    a(href='#services') Services
                 li.sidebar-nav-item
                     a(href='#contact') Contact
 
@@ -51,7 +67,45 @@ html(lang='en')
                 h1.mb-1 Stylish Portfolio
                 h3.mb-5
                     em A Free Bootstrap Theme by Start Bootstrap
-                a.btn.btn-primary.btn-xl(href='#about') Find Out More
+                a.btn.btn-primary.btn-xl(href='#portfolio') Find Out More
+
+        // Portfolio
+        section#portfolio.content-section
+            .container.px-4.px-lg-5
+                .content-section-heading.text-center
+                    h3.text-secondary.mb-0 Portfolio
+                    h2.mb-5 Recent Projects
+                .row.gx-0
+                    .col-lg-6
+                        a.portfolio-item(href='#!')
+                            .caption
+                                .caption-content
+                                    .h2 Stationary
+                                    p.mb-0 A yellow pencil with envelopes on a clean, blue backdrop!
+                            img.img-fluid(src='assets/img/portfolio-1.jpg' alt='...')
+                    .col-lg-6
+                        a.portfolio-item(href='#!')
+                            .caption
+                                .caption-content
+                                    .h2 Ice Cream
+                                    p.mb-0 A dark blue background with a colored pencil, a clip, and a tiny ice cream cone!
+                            img.img-fluid(src='assets/img/portfolio-2.jpg' alt='...')
+                    .col-lg-6
+                        a.portfolio-item(href='#!')
+                            .caption
+                                .caption-content
+                                    .h2 Strawberries
+                                    p.mb-0 Strawberries are such a tasty snack, especially with a little sugar on top!
+                            img.img-fluid(src='assets/img/portfolio-3.jpg' alt='...')
+                    .col-lg-6
+                        a.portfolio-item(href='#!')
+                            .caption
+                                .caption-content
+                                    .h2 Workspace
+                                    p.mb-0 A yellow workspace with some scissors, pencils, and other objects.
+                            img.img-fluid(src='assets/img/portfolio-4.jpg' alt='...')
+                .d-flex.justify-content-center.mt-5 
+                    a.btn.btn-dark.btn-xl(href='#!') Load more
 
         // About
         section#about.content-section.bg-light
@@ -104,56 +158,21 @@ html(lang='en')
         section.callout
             .container.px-4.px-lg-5.text-center
                 h2.mx-auto.mb-5
-                    | Welcome to
-                    em your
-                    | next website!
-                a.btn.btn-primary.btn-xl(href='https://startbootstrap.com/theme/stylish-portfolio/') Download Now!
-
-        // Portfolio
-        section#portfolio.content-section
-            .container.px-4.px-lg-5
-                .content-section-heading.text-center
-                    h3.text-secondary.mb-0 Portfolio
-                    h2.mb-5 Recent Projects
-                .row.gx-0
-                    .col-lg-6
-                        a.portfolio-item(href='#!')
-                            .caption
-                                .caption-content
-                                    .h2 Stationary
-                                    p.mb-0 A yellow pencil with envelopes on a clean, blue backdrop!
-                            img.img-fluid(src='assets/img/portfolio-1.jpg', alt='...')
-                    .col-lg-6
-                        a.portfolio-item(href='#!')
-                            .caption
-                                .caption-content
-                                    .h2 Ice Cream
-                                    p.mb-0 A dark blue background with a colored pencil, a clip, and a tiny ice cream cone!
-                            img.img-fluid(src='assets/img/portfolio-2.jpg', alt='...')
-                    .col-lg-6
-                        a.portfolio-item(href='#!')
-                            .caption
-                                .caption-content
-                                    .h2 Strawberries
-                                    p.mb-0 Strawberries are such a tasty snack, especially with a little sugar on top!
-                            img.img-fluid(src='assets/img/portfolio-3.jpg', alt='...')
-                    .col-lg-6
-                        a.portfolio-item(href='#!')
-                            .caption
-                                .caption-content
-                                    .h2 Workspace
-                                    p.mb-0 A yellow workspace with some scissors, pencils, and other objects.
-                            img.img-fluid(src='assets/img/portfolio-4.jpg', alt='...')
+                    | You can download my CV
+                    | if you need it
+                a.btn.btn-primary.btn-xl(href='https://startbootstrap.com/theme/#!')
+                    i.icon-doc
+                    span.ms-2 Download
 
         // Call to Action
-        section.content-section.bg-primary.text-white
+        section#contact.content-section.bg-primary.text-white
             .container.px-4.px-lg-5.text-center
                 h2.mb-4 The buttons below are impossible to resist...
                 a.btn.btn-xl.btn-light.me-4(href='#!') Click Me!
                 a.btn.btn-xl.btn-dark(href='#!') Look at Me!
 
         // Map
-        #contact.map
+        .map
             iframe(src='https://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&aq=0&oq=twitter&sll=28.659344,-81.187888&sspn=0.128789,0.264187&ie=UTF8&hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&t=m&z=15&iwloc=A&output=embed')
             br
             small
