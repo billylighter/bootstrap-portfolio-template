@@ -78,3 +78,35 @@ function fadeIn(el, display) {
         }
     })();
 };
+
+let menuSection = document.querySelectorAll('#sidebar-nav-1 .sidebar-nav-item a');
+
+// for clickable event
+menuSection.forEach(v => {
+    v.onclick = (() => {
+        setTimeout(() => {
+            menuSection.forEach(j => j.classList.remove('active'))
+            v.classList.add('active')
+        }, 300)
+    })
+})
+
+// for window scrolldown event
+
+function setActiveAnchor() {
+    let mainSection = document.querySelectorAll('.content-section');
+    mainSection.forEach((v, i) => {
+        let rect = v.getBoundingClientRect().y
+        if (rect < window.innerHeight - window.innerHeight + 1) {
+            menuSection.forEach(v => v.classList.remove('active'))
+            menuSection[i].classList.add('active')
+        }
+    })
+}
+
+window.onscroll = (() => {
+    setActiveAnchor();
+})
+window.onload = (() => {
+    setActiveAnchor();
+})

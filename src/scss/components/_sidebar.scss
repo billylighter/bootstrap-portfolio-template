@@ -34,15 +34,20 @@
     text-decoration: none;
     color: $white;
     padding: 10px 15px;
-    i{
+    svg{
         opacity: 0;
     }
 }
 
-.sidebar-nav li a:hover {
+
+.sidebar-nav li.sidebar-nav-item a:hover,
+.sidebar-nav li.sidebar-nav-item a.active {
     text-decoration: none;
     color: #fff;
     background: rgba(255, 255, 255, .2);
+    svg{
+        opacity: 1;
+    }
 }
 
 .sidebar-nav li a:active,

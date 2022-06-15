@@ -11295,6 +11295,10 @@ html {
 .content-section {
   padding-top: 7.5rem;
   padding-bottom: 7.5rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .content-section-heading h2, .content-section-heading .h2 {
@@ -11361,14 +11365,19 @@ html {
   color: #fff;
   padding: 10px 15px;
 }
-.sidebar-nav li.sidebar-nav-item a i {
+.sidebar-nav li.sidebar-nav-item a svg {
   opacity: 0;
 }
 
-.sidebar-nav li a:hover {
+.sidebar-nav li.sidebar-nav-item a:hover,
+.sidebar-nav li.sidebar-nav-item a.active {
   text-decoration: none;
   color: #fff;
   background: rgba(255, 255, 255, 0.2);
+}
+.sidebar-nav li.sidebar-nav-item a:hover svg,
+.sidebar-nav li.sidebar-nav-item a.active svg {
+  opacity: 1;
 }
 
 .sidebar-nav li a:active,
