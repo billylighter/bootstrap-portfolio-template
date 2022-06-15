@@ -4,7 +4,7 @@
 
 #sidebar-wrapper {
     position: fixed;
-    z-index: 2;
+    z-index: 50;
     right: 0;
     width: 250px;
     height: 100%;
@@ -16,6 +16,8 @@
     transform: translateX(250px);
     background: $primary;
     border-left: 1px solid fade-out($white, 0.9);
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .sidebar-nav {
@@ -31,7 +33,10 @@
     display: block;
     text-decoration: none;
     color: $white;
-    padding: 15px;
+    padding: 10px 15px;
+    i{
+        opacity: 0;
+    }
 }
 
 .sidebar-nav li a:hover {
@@ -44,12 +49,20 @@
 .sidebar-nav li a:focus {
     text-decoration: none;
 }
+.sidebar-nav.sidebar-nav-social li.sidebar-nav-item a {
+    svg{
+        min-width: 16px;
+    }
+    i{
+        opacity: 1;
+    }
+}
 
 .sidebar-nav>.sidebar-brand {
     font-size: 1.2rem;
     background: fade-out($gray-800, .9);
-    height: 80px;
-    line-height: 50px;
+    height: initial;
+    line-height: 1;
     padding-top: 15px;
     padding-bottom: 15px;
     padding-left: 15px;
@@ -61,7 +74,7 @@
 }
 
 .sidebar-nav>.sidebar-brand a:hover {
-    color: #fff;
+    color: $white;
     background: none;
 }
 
@@ -99,5 +112,20 @@
 
     &:hover {
         background: $gray-800;
+    }
+}
+
+.author{
+    position: relative;
+    &__name{
+        position: absolute;
+        top: inherit;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding: 10px 15px;
+        background: rgba(0,0,0, .7);
+        color: $white;
+        line-height: 1;
     }
 }

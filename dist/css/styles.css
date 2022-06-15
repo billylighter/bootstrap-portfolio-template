@@ -11311,6 +11311,7 @@ html {
 
 .scroll-to-top {
   position: fixed;
+  z-index: 55;
   right: 15px;
   bottom: 15px;
   display: none;
@@ -11333,7 +11334,7 @@ html {
 
 #sidebar-wrapper {
   position: fixed;
-  z-index: 2;
+  z-index: 50;
   right: 0;
   width: 250px;
   height: 100%;
@@ -11341,6 +11342,8 @@ html {
   transform: translateX(250px);
   background: #1D809F;
   border-left: 1px solid rgba(255, 255, 255, 0.1);
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .sidebar-nav {
@@ -11356,7 +11359,10 @@ html {
   display: block;
   text-decoration: none;
   color: #fff;
-  padding: 15px;
+  padding: 10px 15px;
+}
+.sidebar-nav li.sidebar-nav-item a i {
+  opacity: 0;
 }
 
 .sidebar-nav li a:hover {
@@ -11370,11 +11376,18 @@ html {
   text-decoration: none;
 }
 
+.sidebar-nav.sidebar-nav-social li.sidebar-nav-item a svg {
+  min-width: 16px;
+}
+.sidebar-nav.sidebar-nav-social li.sidebar-nav-item a i {
+  opacity: 1;
+}
+
 .sidebar-nav > .sidebar-brand {
   font-size: 1.2rem;
   background: rgba(52, 58, 64, 0.1);
-  height: 80px;
-  line-height: 50px;
+  height: initial;
+  line-height: 1;
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 15px;
@@ -11413,6 +11426,21 @@ html {
 }
 .menu-toggle:hover {
   background: #343a40;
+}
+
+.author {
+  position: relative;
+}
+.author__name {
+  position: absolute;
+  top: inherit;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 10px 15px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  line-height: 1;
 }
 
 .btn-xl {
@@ -11520,6 +11548,7 @@ footer.footer .social-link:hover {
   font-size: 4rem;
   margin: 0;
   padding: 0;
+  line-height: 1;
 }
 @media (min-width: 992px) {
   .masthead {

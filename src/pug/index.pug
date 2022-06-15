@@ -26,47 +26,46 @@ html(lang='en')
         link(href='css/styles.css' rel='stylesheet')
 
     body#page-top
-
         // Navigation
         a.menu-toggle.rounded(href='#')
             i.fas.fa-bars
         nav#sidebar-wrapper
+            .author
+                img.img-fluid(src='assets/img/author.jpg' draggable='false')
+                div.author__name
+                    strong Selevertov Volodymyr
             ul.sidebar-nav
                 li.sidebar-brand.d-flex.align-items-center
-                    i.icon-compass.text-white.me-2
+                    i.icon-link.text-white.me-2
                     span.fw-bold.text-white Navigation
                 li.sidebar-nav-item
-                    a(href='#page-top') Home
+                    a(href='#page-top') 
+                        i.icon-arrow-right.text-white.me-2
+                        span Home
                 li.sidebar-nav-item
-                    a(href='#portfolio') Portfolio
+                    a(href='#portfolio')
+                        i.icon-arrow-right.text-white.me-2 
+                        span Portfolio
                 li.sidebar-nav-item
-                    a(href='#about') About
+                    a(href='#about')
+                        i.icon-arrow-right.text-white.me-2 
+                        span About
                 li.sidebar-nav-item
-                    a(href='#services') Services
+                    a(href='#services') 
+                        i.icon-arrow-right.text-white.me-2 
+                        span Services
                 li.sidebar-nav-item
-                    a(href='#contact') Contact
-
-                ul.sidebar-nav
-                li.sidebar-brand.d-flex.align-items-center
-                    i.icon-list.text-white.me-2
-                    span.fw-bold.text-white Table of content
-                li.sidebar-nav-item
-                    a(href='#page-top') Home
-                li.sidebar-nav-item
-                    a(href='#portfolio') Portfolio
-                li.sidebar-nav-item
-                    a(href='#about') About
-                li.sidebar-nav-item
-                    a(href='#services') Services
-                li.sidebar-nav-item
-                    a(href='#contact') Contact
-
+                    a(href='#contact') 
+                        i.icon-arrow-right.text-white.me-2 
+                        span Contact
+        
         // Header
         header.masthead.d-flex.align-items-center
             .container.px-4.px-lg-5.text-center
-                h1.mb-1 Stylish Portfolio
-                h3.mb-5
-                    em A Free Bootstrap Theme by Start Bootstrap
+                h1.mb-1
+                    div Site Portfolio
+                h3.my-4
+                    em Enthusiast from the village
                 a.btn.btn-primary.btn-xl(href='#portfolio') Find Out More
 
         // Portfolio
@@ -124,35 +123,95 @@ html(lang='en')
             .container.px-4.px-lg-5
                 .content-section-heading
                     h3.text-secondary.mb-0 Services
-                    h2.mb-5 What We Offer
+                    h2.mb-5 What I Can
                 .row.gx-4.gx-lg-5
-                    .col-lg-3.col-md-6.mb-5.mb-lg-0
+                    .col-lg-3.col-md-6.mb-5
                         span.service-icon.rounded-circle.mx-auto.mb-3
                             i.icon-screen-smartphone
                         h4
-                            strong Responsive
+                            strong Responsive HTML layout
                         p.text-faded.mb-0 Looks great on any screen size!
-                    .col-lg-3.col-md-6.mb-5.mb-lg-0
+                    .col-lg-3.col-md-6.mb-5
                         span.service-icon.rounded-circle.mx-auto.mb-3
                             i.icon-pencil
                         h4
-                            strong Redesigned
-                        p.text-faded.mb-0 Freshly redesigned for Bootstrap 5.
-                    .col-lg-3.col-md-6.mb-5.mb-md-0
+                            strong Redesign existing layout
+                        p.text-faded.mb-0 Rework all version by new design
+                    .col-lg-3.col-md-6.mb-5
                         span.service-icon.rounded-circle.mx-auto.mb-3
-                            i.icon-like
+                            i.icon-star
                         h4
-                            strong Favorited
-                        p.text-faded.mb-0
-                            | Millions of users
-                            i.fas.fa-heart
-                            | Start Bootstrap!
+                            strong Creating widgets
+                        p.text-faded.mb-0 Development widgets like: sliders, tabs, popups, etc...
+
+                .row.gx-4.gx-lg-5
                     .col-lg-3.col-md-6
                         span.service-icon.rounded-circle.mx-auto.mb-3
-                            i.icon-mustache
+                            i.icon-layers
                         h4
-                            strong Question
-                        p.text-faded.mb-0 I mustache you a question...
+                            strong WordPress Theme
+                        p.text-faded.mb-0 Development new theme
+                    .col-lg-3.col-md-6.mb-5
+                        span.service-icon.rounded-circle.mx-auto.mb-3
+                            i.icon-magic-wand
+                        h4
+                            strong WordPress Customizer 
+                        p.text-faded.mb-0 Development new options for theme
+                    .col-lg-3.col-md-6.mb-5
+                        span.service-icon.rounded-circle.mx-auto.mb-3
+                            i.icon-puzzle
+                        h4
+                            strong WordPress Plugin
+                        p.text-faded.mb-0 Development new plugins
+                    .col-lg-3.col-md-6.mb-5
+                        span.service-icon.rounded-circle.mx-auto.mb-3
+                            i.icon-wrench
+                        h4
+                            strong WordPress blocks
+                        p.text-faded.mb-0 Development new Gutenberg blocks
+
+                .row.gx-4.gx-lg-5
+                    .col-lg-3.col-md-6
+                        span.service-icon.rounded-circle.mx-auto.mb-3
+                            i.icon-rocket
+                        h4
+                            strong WordPress optimization
+                        p.text-faded.mb-0 Optimization download site speed
+                    .col-lg-3.col-md-6
+                        span.service-icon.rounded-circle.mx-auto.mb-3
+                            i.icon-globe
+                        h4
+                            strong WordPress SEO
+                        p.text-faded.mb-0 SEO site optimization
+
+        // Services
+        section#technologies.content-section.bg-primary.text-white.text-center
+            .container.px-4.px-lg-5
+                .content-section-heading
+                    h3.text-secondary.mb-0 Technologies
+                    h2.mb-5 My Expertise
+                .row.gx-4.gx-lg-5
+                    .col-lg-3.col-md-6.mb-5.mb-lg-0
+                        span.service-icon.rounded-circle.mx-auto.mb-3
+                            i.fa-brands.fa-html5
+                        h4
+                            strong HTML
+                        p.text-faded.mb-0 Lorem, ipsum dolor.
+
+                    .col-lg-3.col-md-6.mb-5.mb-lg-0
+                        span.service-icon.rounded-circle.mx-auto.mb-3
+                            i.fa-brands.fa-css3-alt
+                        h4
+                            strong CSS
+                        p.text-faded.mb-0 Lorem, ipsum dolor.
+
+                    .col-lg-3.col-md-6.mb-5.mb-lg-0
+                        span.service-icon.rounded-circle.mx-auto.mb-3
+                            i.fa-brands.fa-js
+                        h4
+                            strong JS
+                        p.text-faded.mb-0 Lorem, ipsum dolor.
+
 
         // Callout
         section.callout
@@ -160,7 +219,7 @@ html(lang='en')
                 h2.mx-auto.mb-5
                     | You can download my CV
                     | if you need it
-                a.btn.btn-primary.btn-xl(href='https://startbootstrap.com/theme/#!')
+                a.btn.btn-primary.btn-xl(href='#!')
                     i.icon-doc
                     span.ms-2 Download
 
@@ -172,7 +231,7 @@ html(lang='en')
                 a.btn.btn-xl.btn-dark(href='#!') Look at Me!
 
         // Map
-        .map
+        .map.d-none
             iframe(src='https://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&aq=0&oq=twitter&sll=28.659344,-81.187888&sspn=0.128789,0.264187&ie=UTF8&hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&t=m&z=15&iwloc=A&output=embed')
             br
             small
@@ -184,14 +243,17 @@ html(lang='en')
                 ul.list-inline.mb-5
                     li.list-inline-item
                         a.social-link.rounded-circle.text-white.mr-3(href='#!')
-                            i.icon-social-facebook
+                            i.fa-brands.fa-facebook-f
                     li.list-inline-item
                         a.social-link.rounded-circle.text-white.mr-3(href='#!')
-                            i.icon-social-twitter
+                            i.fa-brands.fa-linkedin-in
+                    li.list-inline-item
+                        a.social-link.rounded-circle.text-white.mr-3(href='#!')
+                            i.fa-brands.fa-instagram
                     li.list-inline-item
                         a.social-link.rounded-circle.text-white(href='#!')
-                            i.icon-social-github
-                p.text-muted.small.mb-0 Copyright &copy; Your Website 2022
+                            i.fa-brands.fa-github
+                p.text-muted.small.mb-0 &copy; Volodymyr Selevertov 2022
 
         // Scroll to Top Button
         a.scroll-to-top.rounded(href='#page-top')

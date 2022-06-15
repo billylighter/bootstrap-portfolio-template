@@ -32,6 +32,7 @@ html {
 // Scroll to top button
 .scroll-to-top {
     position: fixed;
+    z-index: 55;
     right: 15px;
     bottom: 15px;
 
