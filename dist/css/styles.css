@@ -11292,6 +11292,26 @@ html {
   height: 100%;
 }
 
+.announce {
+  position: static;
+  z-index: 25;
+  top: 0;
+  right: 0;
+  bottom: initial;
+  left: 0;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  background-color: #1D809F;
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.announce img {
+  margin-left: 1rem;
+  max-width: 25px;
+  height: auto;
+}
+
 .social-link {
   display: block;
   text-decoration: none;
