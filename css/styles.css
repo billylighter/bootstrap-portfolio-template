@@ -11306,7 +11306,7 @@ html {
   color: #fff;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
-.announce img {
+.announce svg {
   margin-left: 1rem;
   max-width: 25px;
   height: auto;
@@ -11432,18 +11432,27 @@ html {
   position: relative;
   display: inline;
   background: #f8f8f8;
-  padding: 6px 10px;
+  padding: 5px 10px 5px 45px;
   border-radius: 5px;
+  font-size: 1.2rem;
   font-weight: 600;
   text-align: left;
 }
+.flag svg {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  width: 24px;
+  height: auto;
+  transform: translateY(-50%);
+}
 
 .direction-l .flag {
-  box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
 }
 
 .direction-r .flag {
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
 }
 
 .direction-l .flag:before,
@@ -11511,14 +11520,15 @@ html {
 }
 
 .time {
+  font-size: 1rem;
   display: inline-block;
-  padding: 4px 6px;
+  padding: 4px 1rem;
   background: #f8f8f8;
 }
 
 .desc {
   margin: 1em 0.75em 0 0;
-  font-size: 0.77777em;
+  font-size: 1rem;
   font-style: italic;
   line-height: 1.5em;
 }
@@ -11552,6 +11562,17 @@ html {
   .flag {
     background: white;
     z-index: 15;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 140px;
+    min-height: 39px;
+    padding: 5px 15px;
+  }
+  .flag svg {
+    position: static;
+    margin-right: 15px;
+    transform: initial;
   }
 
   .direction-l .flag:before,
@@ -11588,8 +11609,15 @@ html {
   .time-wrapper {
     display: block;
     position: relative;
-    margin: 4px 0 0 0;
-    z-index: 14;
+    top: -1px;
+    z-index: 30;
+  }
+
+  .time {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15), 0 0 0px rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+    border-radius: 0 0 5px 5px;
+    font-size: 0.8rem;
   }
 
   .direction-l .time-wrapper {
