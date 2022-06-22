@@ -8,12 +8,12 @@
     overflow: hidden;
     max-width: 530px;
     margin: auto auto 1rem;
-
+    outline: 1px solid $black;
     .caption {
         display: flex;
         height: 100%;
         width: 100%;
-        background-color: fade-out($gray-900, 0.8);
+        background-color: fade-out($gray-900, 0.2);
         position: absolute;
         top: 0;
         bottom: 0;
@@ -35,35 +35,50 @@
         }
     }
 
+    .caption {
+        transition: clip-path 0.25s ease-out, background-color 0.7s;
+        // clip-path: inset(0px);
+
+        .caption-content {
+            transition: opacity 0.25s;
+            margin-left: 5rem;
+            margin-right: 5rem;
+            margin-bottom: 5rem;
+        }
+    }
+
+    img {
+        transition: clip-path 0.25s ease-out;
+        // clip-path: inset(-1px);
+    }
+
+    &:hover {
+        // img {
+        //     clip-path: inset(2rem);
+        // }
+
+        .caption {
+            background-color: fade-out($primary, 0.1);
+            // clip-path: inset(2rem);
+            
+        }
+    }
+
     @media(min-width: 992px) {
         max-width: none;
         margin: 0;
+    }
 
+    @media(max-width: 576px){
         .caption {
-            transition: clip-path 0.25s ease-out, background-color 0.7s;
-            clip-path: inset(0px);
-
-            .caption-content {
+            .caption-content{
+                max-width: none;
+                margin: 0;
                 transition: opacity 0.25s;
-                margin-left: 5rem;
-                margin-right: 5rem;
-                margin-bottom: 5rem;
-            }
-        }
-
-        img {
-            transition: clip-path 0.25s ease-out;
-            clip-path: inset(-1px);
-        }
-
-        &:hover {
-            img {
-                clip-path: inset(2rem);
-            }
-
-            .caption {
-                background-color: fade-out($primary, 0.1);
-                clip-path: inset(2rem);
+                margin-top: 2rem;
+                margin-left: 1rem;
+                margin-right: 2rem;
+                margin-bottom: 1rem;
             }
         }
     }
