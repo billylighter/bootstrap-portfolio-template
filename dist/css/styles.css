@@ -11573,6 +11573,7 @@ html {
     position: static;
     margin-right: 15px;
     transform: initial;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
   }
 
   .direction-l .flag:before,
